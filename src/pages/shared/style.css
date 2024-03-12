@@ -1,0 +1,187 @@
+/* style.css */
+.header-container {
+  background-color: transparent; /* Set the background color to transparent */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-top: 40px;
+}
+
+.logo img {
+  max-height: 40px;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin: 0 10px; /* Adjust margin as needed */
+  color: #fff; /* Set the text color for navigation items */
+  font-weight: bold;
+}
+
+.image-container {
+  background-image: url("../../assets/Homepage/CAM\(11\).jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  box-shadow: inset 0 20px 600px 20px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 768px) {
+  .image-container {
+    height: 600px;
+  }
+}
+
+.logo-text {
+  color: white;
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: bold; /* Add font weight as needed */
+  /* Add any other styling properties as needed */
+}
+.inside-container {
+  position: absolute;
+  top: 400px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  box-shadow: inset 0 0 0 -20px rgba(0, 0, 0, 0.7);
+}
+.secons-inside {
+  display: flex;
+}
+.inside-inside {
+  display: flex;
+  flex-direction: column;
+  margin-right: 90px;
+  margin-left: 20px;
+}
+.floating-text {
+  right: 100px;
+  color: #028e73;
+  font-weight: 400;
+  font-size: 24px;
+}
+.floating-text2 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 34px;
+}
+
+.seperator {
+  height: 150px;
+  width: 5px;
+  background-color: #fff;
+}
+.navigation2 {
+  list-style: none;
+  display: flex;
+  margin-left: 120px;
+  padding: 0;
+}
+.navigation2 li {
+  margin: 0 10px; /* Adjust margin as needed */
+  color: #fff; /* Set the text color for navigation items */
+  font-weight: bold;
+}
+.icons-container {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 190px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+}
+.icon-text {
+  color: #fff;
+  font-weight: 900;
+}
+
+.icon svg {
+  width: 48px;
+  height: 48px;
+  fill: transparent; /* Change the color as needed */
+  margin-bottom: 5px;
+}
+
+.counter {
+  text-align: center;
+  font-size: 18px;
+  color: #555; /* Change the color as needed */
+}
+
+@media screen and (max-width: 768px) {
+  .inside-container {
+    flex-direction: column-reverse;
+  }
+  .floating-text {
+    color: #028e73;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .floating-text2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+  }
+  .seperator {
+    height: 90px;
+    width: 5px;
+    background-color: #fff;
+    border-radius: 12px;
+  }
+  .navigation2 {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+  .navigation2 li {
+    margin: 0 10px; /* Adjust margin as needed */
+    color: #fff; /* Set the text color for navigation items */
+    font-weight: bold;
+  }
+  .icons-container {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 0;
+  }
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 18px;
+  }
+  .icon-text {
+    color: #fff;
+    font-weight: 200;
+    font-size: 8px;
+  }
+
+  .icon svg {
+    width: 28px;
+    height: 28px;
+    fill: transparent; /* Change the color as needed */
+    margin-bottom: 5px;
+  }
+}
