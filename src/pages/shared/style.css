@@ -36,6 +36,7 @@
   margin: 0 10px; /* Adjust margin as needed */
   color: #fff; /* Set the text color for navigation items */
   font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .burger-menu {

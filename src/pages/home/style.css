@@ -31,10 +31,12 @@
   text-align: justify; /* Justify the text */
   direction: rtl; /* Set text direction to right-to-left */
   font-size: 23px;
-  line-height: 45px;
+  /* line-height: 45px; */
   margin-right: 50px;
+  word-spacing: normal;
   color: gray;
   z-index: 9;
+  font-family: "Courier New", Courier, monospace;
 }
 .header-text {
   color: #028e73;
