@@ -44,9 +44,8 @@ const LocationScreen = () => {
       <style>
         {`
           @media screen and (max-width: 768px) {
-            img {
-              height: 150px;
-              width: 150px;
+            .immm {
+              display:none;
             }
           }
         `}
@@ -63,6 +62,7 @@ const LocationScreen = () => {
           transform: "rotate(45deg)",
           overflow: "hidden",
         }}
+        className="immm"
       />
       <img
         src={logo}

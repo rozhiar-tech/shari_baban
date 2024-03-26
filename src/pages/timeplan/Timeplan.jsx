@@ -78,7 +78,7 @@ const Timer2 = () => {
   }, [startCountDown]);
 
   return (
-    <div className="flex justify-center items-center h-screen w-screen bg-[#028e73]">
+    <div className="flex justify-center items-center h-screen w-screen bg-[#028e73] overflow-hidden">
       <div className="mx-3 sm:p-10 p-4 rounded-md flex justify-center flex-col gap-6 shadow-[5px_5px_50px_rgba(47,46,60,1)]">
         <div className="flex flex-col gap-2">
           <h1 className="text-center sm:text-3xl text-xl font-semibold leading-8 text-[#FBFAF8]">
