@@ -1,7 +1,17 @@
 import React from "react";
+import { useState } from "react";
 import "./style.css";
-
+import logo from "../../assets/logo.png";
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState(null);
+
+  const handleItemClick = (item) => {
+    setActiveItem(item);
+  };
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <div className="header-container image-container">
       <div className="inside-container">
@@ -172,14 +182,77 @@ export default function Header() {
       </div>
       <nav className="navbar">
         <div className="logo">
-          <span className="logo-text">Shari Baban</span>
+          <img alt="logo" src={logo} />
         </div>
-        <ul className="navigation">
+
+        <div className="burger-menu" onClick={toggleMenu}>
+          <div className="burger-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <path
+                  d="M4 18L20 18"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                ></path>{" "}
+                <path
+                  d="M4 12L20 12"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                ></path>{" "}
+                <path
+                  d="M4 6L20 6"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                ></path>{" "}
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <ul className={`navigation ${isMenuOpen ? "open" : ""}`}>
           <li>سەرەکی</li>
           <li>دەربارە</li>
           <li>پەیوەندی</li>
         </ul>
       </nav>
+      {isMenuOpen && (
+        <div className="menu-container">
+          <ul className="menu-items">
+            <li
+              className={`itemss ${activeItem === "سەرەکی" ? "active" : ""}`}
+              onClick={() => handleItemClick("سەرەکی")}
+            >
+              سەرەکی
+            </li>
+            <li
+              className={`itemss ${activeItem === "دەربارە" ? "active" : ""}`}
+              onClick={() => handleItemClick("دەربارە")}
+            >
+              دەربارە
+            </li>
+            <li
+              className={`itemss ${activeItem === "پەیوەندی" ? "active" : ""}`}
+              onClick={() => handleItemClick("پەیوەندی")}
+            >
+              پەیوەندی
+            </li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
