@@ -38,7 +38,7 @@ export default function About() {
     // Add more image URLs as needed
   ];
   return (
-    <section className="about-section">
+    <section className="about-section" id="about">
       <div className="blob-parent">
         <div className="blob-container">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -74,28 +74,27 @@ export default function About() {
       <div className="newTransparent">
         <img src={logo} alt="logo" />
       </div>
-      <div className="gallery">
-        <Carousel
-          showArrows={true}
-          showStatus={false}
-          showThumbs={false}
-          centerMode={false}
-          infiniteLoop={true}
-          emulateTouch={true}
-          interval={5000}
-          selectedItem={0}
-          transitionTime={500}
-        >
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              style={{ maxHeight: "800px", objectFit: "cover" }}
-              alt={`Imag ${index + 1}`}
-            />
-          ))}
-        </Carousel>
-      </div>
+      <Carousel
+        showArrows={true}
+        showStatus={false}
+        showThumbs={false}
+        centerMode={false}
+        infiniteLoop={true}
+        emulateTouch={true}
+        interval={5000}
+        selectedItem={0}
+        transitionTime={500}
+      >
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            style={{ maxHeight: "800px", objectFit: "fill" }}
+            alt={`Imag ${index + 1}`}
+          />
+        ))}
+      </Carousel>
+
       <div className="types">
         <h2 className="apartment-header">Apartment Type 160M</h2>
         <img src={apType1} alt="apartment" className="apartments" />

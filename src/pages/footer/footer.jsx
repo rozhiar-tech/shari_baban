@@ -1,13 +1,25 @@
 import React from "react";
 import "./Footer.css";
+import { useState } from "react";
 
 const Footer = () => {
   const phoneNumber1 = "0772 622 0101";
   const phoneNumber2 = "0750 622 0101";
 
+  const [showForm, setShowForm] = useState(false);
   const handlePhoneClick = (phoneNumber) => {
     window.location.href = `tel:${phoneNumber.replace(/\s/g, "")}`;
   };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Logic to handle form submission
+  };
+
+  const toggleForm = () => {
+    setShowForm(!showForm);
+  };
+
   return (
     <footer class="footer">
       {/* <video
@@ -51,72 +63,87 @@ const Footer = () => {
                   <h4 class="c-nav-tool_title">Menu</h4>
                   <ul class="c-nav-tool_list">
                     <li>
-                      <a href="/collections/all" class="c-link">
-                        Shop All
+                      <a href="#home" class="c-link">
+                        Home
                       </a>
                     </li>
 
                     <li>
-                      <a href="/pages/about-us" class="c-link">
+                      <a href="#about" class="c-link">
                         About Us
                       </a>
                     </li>
 
                     <li>
-                      <a href="/blogs/community" class="c-link">
-                        Community
+                      <a href="#location" class="c-link">
+                        location
                       </a>
                     </li>
                     <li>
-                      <a href="/" class="c-link">
-                        Vibes
+                      <a href="#amentities" class="c-link">
+                        amentities
                       </a>
                     </li>
                   </ul>
                 </nav>
               </div>
 
-              <div class="layout_item w-25">
-                <nav class="c-nav-tool">
-                  <h4 class="c-nav-tool_title">Support</h4>
-                  <ul class="c-nav-tool_list">
-                    <li class="c-nav-tool_item">
-                      <a href="/pages/shipping-returns" class="c-link">
-                        Shipping &amp; Returns
-                      </a>
-                    </li>
-
-                    <li class="c-nav-tool_item">
-                      <a href="/pages/help" class="c-link">
-                        Help &amp; FAQ
-                      </a>
-                    </li>
-
-                    <li class="c-nav-tool_item">
-                      <a href="/pages/terms-conditions" class="c-link">
-                        Terms &amp; Conditions
-                      </a>
-                    </li>
-
-                    <li class="c-nav-tool_item">
-                      <a href="/pages/privacy-policy" class="c-link">
-                        Privacy Policy
-                      </a>
-                    </li>
-
-                    <li class="c-nav-tool_item">
-                      <a href="/pages/contact" class="c-link">
-                        Contact
-                      </a>
-                    </li>
-
-                    <li class="c-nav-tool_item">
-                      <a href="/account/login" class="c-link">
-                        Login
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+              <div className="layout_item w-25">
+                <div className="c-contact-info">
+                  <p className="phone-number">
+                    Phone Number Sales Department:{" "}
+                    <a
+                      href={`tel:${phoneNumber1.replace(/\s/g, "")}`}
+                      onMouseEnter={(e) => (e.target.style.color = "red")}
+                      onMouseLeave={(e) => (e.target.style.color = "black")}
+                      onClick={() => handlePhoneClick(phoneNumber1)}
+                    >
+                      {phoneNumber1}
+                    </a>{" "}
+                    -{" "}
+                    <a
+                      href={`tel:${phoneNumber2.replace(/\s/g, "")}`}
+                      onMouseEnter={(e) => (e.target.style.color = "red")}
+                      onMouseLeave={(e) => (e.target.style.color = "black")}
+                      onClick={() => handlePhoneClick(phoneNumber2)}
+                    >
+                      {phoneNumber2}
+                    </a>
+                  </p>
+                  <button onClick={toggleForm}>Contact Us</button>
+                  {showForm && (
+                    <div className="contact-form-overlay">
+                      <div className="contact-form-container">
+                        <h4>Contact Us</h4>
+                        <form onSubmit={handleSubmit} className="contact-form">
+                          <div className="form-group">
+                            <label htmlFor="name">Name:</label>
+                            <input type="text" id="name" name="name" required />
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="email">Email:</label>
+                            <input
+                              type="email"
+                              id="email"
+                              name="email"
+                              required
+                            />
+                          </div>
+                          <div className="form-group">
+                            <label htmlFor="message">Message:</label>
+                            <textarea
+                              id="message"
+                              name="message"
+                              rows="4"
+                              required
+                            ></textarea>
+                          </div>
+                          <button type="submit">Submit</button>
+                        </form>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
             <div class="layout c-2">

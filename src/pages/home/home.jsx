@@ -6,7 +6,7 @@ import logo from "../../assets/logo2.png";
 export default function Home() {
   return (
     <>
-      <section className="home-section">
+      <section className="home-section" id="home">
         <div className="transparent-logo">
           <img src={logo} alt="logo" />
         </div>

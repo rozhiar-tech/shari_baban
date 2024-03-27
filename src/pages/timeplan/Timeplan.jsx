@@ -90,37 +90,37 @@ const Timer2 = () => {
         </div>
         <div className="flex justify-between sm:px-4">
           <div className="flex flex-col justify-center items-center gap-3">
-            <span className="py-3 px-3 flex justify-center items-center bg-[#88BDBC] text-[#112D32] text-3xl font-semibold rounded-md">
+            <span className="py-3 px-3 flex justify-center items-center bg-[#88BDBC] text-[#112D32] text-xl font-semibold rounded-md">
               {countDownTime?.years}
             </span>
             <span className="text-sm text-[#FBFAF8] font-bold">Years</span>
           </div>
           <div className="flex flex-col justify-center items-center gap-3">
-            <span className="py-3 px-3 bg-[#88BDBC] text-[#112D32] text-3xl font-semibold rounded-md">
+            <span className="py-3 px-3 bg-[#88BDBC] text-[#112D32] text-xl font-semibold rounded-md">
               {countDownTime?.months}
             </span>
             <span className="text-sm text-[#FBFAF8] font-bold">Months</span>
           </div>
           <div className="flex flex-col justify-center items-center gap-3">
-            <span className="py-3 px-3 bg-[#88BDBC] text-[#112D32] text-3xl font-semibold rounded-md">
+            <span className="py-3 px-3 bg-[#88BDBC] text-[#112D32] text-xl font-semibold rounded-md">
               {countDownTime?.days}
             </span>
             <span className="text-sm text-[#FBFAF8] font-bold">Days</span>
           </div>
           <div className="flex flex-col justify-center items-center gap-3">
-            <span className="py-3 px-3 bg-[#88BDBC] text-[#112D32] text-3xl font-semibold rounded-md">
+            <span className="py-3 px-3 bg-[#88BDBC] text-[#112D32] text-xl font-semibold rounded-md">
               {countDownTime?.hours}
             </span>
             <span className="text-sm text-[#FBFAF8] font-bold">Hours</span>
           </div>
           <div className="flex flex-col justify-center items-center gap-3">
-            <span className="py-3 px-3 bg-[#88BDBC] text-[#112D32] text-3xl font-semibold rounded-md">
+            <span className="py-3 px-3 bg-[#88BDBC] text-[#112D32] text-xl font-semibold rounded-md">
               {countDownTime?.minutes}
             </span>
             <span className="text-sm text-[#FBFAF8] font-bold">Minutes</span>
           </div>
           <div className="flex flex-col justify-center items-center gap-3">
-            <span className="py-3 px-3 bg-[#88BDBC] text-[#112D32] text-3xl font-semibold rounded-md">
+            <span className="py-3 px-3 bg-[#88BDBC] text-[#112D32] text-xl font-semibold rounded-md">
               {countDownTime?.seconds}
             </span>
             <span className="text-sm text-[#FBFAF8] font-bold">Seconds</span>

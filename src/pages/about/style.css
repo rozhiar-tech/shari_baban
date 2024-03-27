@@ -14,7 +14,7 @@
 .about-text {
   font-size: 34px;
   color: aliceblue;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "k24";
 
   font-weight: bold;
 }
@@ -82,8 +82,8 @@
 
 .newTransparent {
   position: absolute;
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   /* overflow: hidden; */
   top: 0;
   right: 10px;
@@ -165,4 +165,5 @@
   line-height: 1.6; /* Adjust line height for readability */
   margin-bottom: 20px; /* Add margin to separate from other content */
   color: #fff; /* Set text color */
+  font-family: "k24";
 }

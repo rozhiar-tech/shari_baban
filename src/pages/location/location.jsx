@@ -39,6 +39,7 @@ const LocationScreen = () => {
         marginTop: "40px",
         position: "relative", // Make the container relative for absolute positioning of images
       }}
+      id="location"
     >
       {/* Apply media query */}
       <style>

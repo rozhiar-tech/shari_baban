@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "k24"; /*a name to be used later*/
+  src: url("../../assets/fonts/K24KurdishBold-Bold.ttf"); /*URL to font*/
+}
+
 .home-section {
   height: 1600px;
   width: 100%;
@@ -26,7 +31,7 @@
 }
 
 .home-text {
-  height: 35%;
+  height: 30%;
   width: 50%;
   text-align: justify; /* Justify the text */
   direction: rtl; /* Set text direction to right-to-left */
@@ -36,7 +41,7 @@
   word-spacing: normal;
   color: gray;
   z-index: 9;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "k24";
 }
 .header-text {
   color: #028e73;
@@ -69,15 +74,26 @@
     align-items: center;
   }
   .home-text {
-    height: 35%;
-    width: 50%;
-    text-align: justify; /* Justify the text */
-    direction: rtl; /* Set text direction to right-to-left */
-    font-size: 18px;
+    height: 100%;
+    width: 90%;
+    text-align: justify;
+    direction: rtl;
+    font-size: 15px;
     line-height: 30px;
-
+    margin-right: 0;
     color: gray;
+    word-spacing: 2px;
+    font-family: "k24";
   }
+  .transparent-logo img {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    /* overflow: hidden; */
+    top: 1800px;
+    right: 0;
+  }
+
   .image-containerr {
     height: 500px; /* Set the height of the container */
     width: 250px; /* Ensure the container takes full width */
