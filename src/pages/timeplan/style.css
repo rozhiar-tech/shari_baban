@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "k24"; /*a name to be used later*/
+  src: url("../../assets/fonts/K24KurdishBold-Bold.ttf"); /*URL to font*/
+}
+
+.tete {
+  font-family: "k24";
+}

@@ -49,6 +49,8 @@ i18n
             aptext: "Apartment Type",
             floor: "Floor plans and Layouts",
             time: "Time Plan of the project",
+            timesub:
+              "Time Remaining to be in your next home and be in your dream house.",
           },
         },
       },
@@ -85,6 +87,8 @@ i18n
             aptext: "نوع الشقة",
             floor: "مخططات الطوابق والتخطيطات",
             time: "الخطة الزمنية للمشروع",
+            timesub:
+              "الوقت المتبقي لتكون في منزلك القادم وتكون في منزل أحلامك.",
           },
         },
       },
@@ -120,6 +124,8 @@ i18n
             aptext: "جۆری شوقە",
             floor: "پلانی نهۆمەکان",
             time: "کاتی تەواوبوونی پرۆژەکە",
+            timesub:
+              " کاتی تەواو بوونی ماڵی خەونەکانت کۆبەرەوە لەگەڵ خیزانەکەت خەونەکەتان بێنە دی",
           },
         },
       },
