@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "k24"; /*a name to be used later*/
+  src: url("../../assets/fonts/K24KurdishBold-Bold.ttf"); /*URL to font*/
+}
+
 .about-section {
   /* height: 1400px; */
   width: 100%;
@@ -128,10 +133,13 @@
 .apartment-header {
   color: #028e73; /* Desired color */
   font-weight: bold; /* Desired font weight */
+  font-family: "k24";
+  font-size: large;
 }
 .floor-plans {
   color: antiquewhite; /* Desired color */
   font-weight: bold; /* Desired font weight */
+  font-family: "k24";
 }
 
 .floors {

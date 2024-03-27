@@ -24,7 +24,11 @@ import floor3 from "../../assets/Floor plans and layouts/WhatsApp Image 2024-03-
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from "react-i18next";
+
 export default function About() {
+  const { t } = useTranslation();
+
   const images = [
     image8,
     image,
@@ -60,15 +64,9 @@ export default function About() {
         </div>
         <div className="about-text-container">
           <h1 className="header-text-about">
-            About <br /> Baban City
+            {t("about.aboutt")} <br /> {t("about.city")}
           </h1>
-          <p className="kurdish-text">
-            شاری بابان بنیات دەنرێت لەسەر ڕووبەری ٨٨ دۆنم لە جوانترین و
-            ستراتیجیترین شوێنی شاری سلێمانی. پرۆژەکە پێکدێت لە ٢٤ باڵەخانەی
-            نیشتەجێبوون و ٢ باڵەخانەی بازرگانی. پرۆژەکە دەکەوێتە سەرچنار، نزیک
-            زانکۆی سلێمانی، زانکۆی کۆمار، زانکۆی تیشک. شاری بابان بە بەرزترین
-            کوالیتی لە جوانترین شوێنی شاردا ماڵێکی ئارام دەبێت بۆ دانیشتوان.
-          </p>
+          <p className="kurdish-text">{t("about.abtext")}</p>
         </div>
       </div>
       <div className="newTransparent">
@@ -96,17 +94,29 @@ export default function About() {
       </Carousel>
 
       <div className="types">
-        <h2 className="apartment-header">Apartment Type 160M</h2>
+        <h2 className="apartment-header">
+          {t("about.aptext")} {t("about.ap1")}
+        </h2>
         <img src={apType1} alt="apartment" className="apartments" />
-        <h2 className="apartment-header">Apartment Type 183M</h2>
+        <h2 className="apartment-header">
+          {t("about.aptext")} {t("about.ap2")}
+        </h2>
         <img src={apType2} alt="apartment" className="apartments" />
-        <h2 className="apartment-header">Apartment Type 193M</h2>
+        <h2 className="apartment-header">
+          {t("about.aptext")} {t("about.ap3")}
+        </h2>
         <img src={apType3} alt="apartment" className="apartments" />
-        <h2 className="apartment-header">Apartment Type 222M</h2>
+        <h2 className="apartment-header">
+          {t("about.aptext")} {t("about.ap4")}
+        </h2>
         <img src={apType4} alt="apartment" className="apartments" />
-        <h2 className="apartment-header">Apartment Type 263M</h2>
+        <h2 className="apartment-header">
+          {t("about.aptext")} {t("about.ap5")}
+        </h2>
         <img src={apType5} alt="apartment" className="apartments" />
-        <h2 className="apartment-header">Apartment Type 291M</h2>
+        <h2 className="apartment-header">
+          {t("about.aptext")} {t("about.ap6")}
+        </h2>
         <img
           src={apType6}
           alt="apartment"
@@ -114,7 +124,7 @@ export default function About() {
           style={{ marginBottom: "40px" }}
         />
       </div>
-      <h1 className="floor-plans">Floor plans and Layouts</h1>
+      <h1 className="floor-plans">{t("about.floor")}</h1>
       <div className="floors">
         <img src={floor1} alt="Floor 1" className="floor-image" />
         <img src={floor2} alt="Floor 2" className="floor-image" />

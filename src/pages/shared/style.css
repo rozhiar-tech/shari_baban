@@ -1,4 +1,10 @@
 /* style.css */
+
+@font-face {
+  font-family: "k24"; /*a name to be used later*/
+  src: url("../../assets/fonts/K24KurdishBold-Bold.ttf"); /*URL to font*/
+}
+
 .header-container {
   background-color: transparent; /* Set the background color to transparent */
 }
@@ -36,7 +42,7 @@
   margin: 0 10px; /* Adjust margin as needed */
   color: #fff; /* Set the text color for navigation items */
   font-weight: bold;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "k24";
 }
 
 .burger-menu {
@@ -73,7 +79,7 @@
   }
 }
 .menu-container {
-  height: 150px;
+  height: 205px;
   width: 95%;
   background-color: #fff;
   margin: 10px;
@@ -86,7 +92,7 @@
 
 .menu-items {
   list-style: none;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "k24";
   width: 100%;
   padding: 0;
 }
@@ -120,7 +126,10 @@
     height: 600px;
   }
 }
-
+.refs {
+  list-style: none;
+  margin: 0;
+}
 .logo-text {
   color: white;
   font-size: 18px; /* Adjust font size as needed */

@@ -2,9 +2,39 @@ import React from "react";
 import { useState } from "react";
 import "./style.css";
 import logo from "../../assets/logo.png";
+import { useTranslation } from "react-i18next";
+import i18n from "../../lang/i18n";
+
+const LanguageMenu = ({ onSelectLanguage }) => {
+  const languages = [
+    { code: "en", label: "EN" },
+    { code: "ar", label: "AR" },
+    { code: "ku", label: "KU" },
+  ];
+
+  return (
+    <div className="flex items-center">
+      {languages.map((language) => (
+        <div
+          key={language.code}
+          onClick={() => {
+            onSelectLanguage(language.code);
+            i18n.changeLanguage(language.code);
+          }}
+          className="cursor-pointer text-white font-bold p-1 hover:bg-gray-200 rounded-md hover:text-[#028e73]"
+        >
+          {language.label}
+        </div>
+      ))}
+    </div>
+  );
+};
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
+  const { t } = useTranslation();
+  // eslint-disable-next-line no-unused-vars
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
 
   const handleItemClick = (item) => {
     setActiveItem(item);
@@ -12,10 +42,13 @@ export default function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <div className="header-container image-container">
       <div className="inside-container">
         <div className="icons-container">
+          <LanguageMenu onSelectLanguage={setSelectedLanguage} />
+
           <div className="icon">
             {/* Your first SVG icon */}
             <svg
@@ -175,8 +208,8 @@ export default function Header() {
         <div className="secons-inside">
           <div className="seperator"></div>
           <div className="inside-inside">
-            <span className="floating-text">پرۆژەی نیشتەجێ بوون</span>
-            <span className="floating-text2">شاری بابان</span>
+            <span className="floating-text">{t("description.part2")}</span>
+            <span className="floating-text2">{t("description.part3")}</span>
           </div>
         </div>
       </div>
@@ -224,9 +257,42 @@ export default function Header() {
         </div>
 
         <ul className={`navigation ${isMenuOpen ? "open" : ""}`}>
-          <li>سەرەکی</li>
-          <li>دەربارە</li>
-          <li>پەیوەندی</li>
+          <li>
+            <a
+              href="#home"
+              onClick={() => handleItemClick("home")}
+              style={{ color: "white" }}
+            >
+              {t("navigation.home")}
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              onClick={() => handleItemClick("about")}
+              style={{ color: "white" }}
+            >
+              {t("navigation.about")}
+            </a>
+          </li>
+          <li>
+            <a
+              href="#location"
+              onClick={() => handleItemClick("location")}
+              style={{ color: "white" }}
+            >
+              {t("navigation.location")}
+            </a>
+          </li>
+          <li>
+            <a
+              href="#amentities"
+              onClick={() => handleItemClick("amen")}
+              style={{ color: "white" }}
+            >
+              {t("navigation.amen")}
+            </a>
+          </li>
         </ul>
       </nav>
       {isMenuOpen && (
@@ -236,19 +302,35 @@ export default function Header() {
               className={`itemss ${activeItem === "سەرەکی" ? "active" : ""}`}
               onClick={() => handleItemClick("سەرەکی")}
             >
-              سەرەکی
+              <a href="#home" className="refs">
+                {t("navigation.home")}
+              </a>
             </li>
             <li
               className={`itemss ${activeItem === "دەربارە" ? "active" : ""}`}
               onClick={() => handleItemClick("دەربارە")}
             >
-              دەربارە
+              <a href="#about" className="refs">
+                {t("navigation.about")}
+              </a>
             </li>
             <li
               className={`itemss ${activeItem === "پەیوەندی" ? "active" : ""}`}
               onClick={() => handleItemClick("پەیوەندی")}
             >
-              پەیوەندی
+              <a href="#location" className="refs">
+                {t("navigation.location")}
+              </a>
+            </li>
+            <li
+              className={`itemss ${
+                activeItem === "خزمەتگوزاری" ? "active" : ""
+              }`}
+              onClick={() => handleItemClick("خزمەتگوزاری")}
+            >
+              <a href="#amentities" className="refs">
+                {t("navigation.amen")}
+              </a>
             </li>
           </ul>
         </div>
