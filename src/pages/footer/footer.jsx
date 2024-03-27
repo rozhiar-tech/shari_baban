@@ -1,8 +1,9 @@
 import React from "react";
 import "./Footer.css";
 import { useState } from "react";
-
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const { t } = useTranslation();
   const phoneNumber1 = "0772 622 0101";
   const phoneNumber2 = "0750 622 0101";
 
@@ -63,25 +64,25 @@ const Footer = () => {
                   <h4 class="c-nav-tool_title">Menu</h4>
                   <ul class="c-nav-tool_list">
                     <li>
-                      <a href="#home" class="c-link">
-                        Home
+                      <a href="#home" class="c-link" className="tete">
+                        {t("navigation.home")}
                       </a>
                     </li>
 
                     <li>
-                      <a href="#about" class="c-link">
-                        About Us
+                      <a href="#about" class="c-link" className="tete">
+                        {t("navigation.about")}
                       </a>
                     </li>
 
                     <li>
-                      <a href="#location" class="c-link">
-                        location
+                      <a href="#location" class="c-link" className="tete">
+                        {t("navigation.location")}
                       </a>
                     </li>
                     <li>
-                      <a href="#amentities" class="c-link">
-                        amentities
+                      <a href="#amentities" class="c-link" className="tete">
+                        {t("navigation.amen")}
                       </a>
                     </li>
                   </ul>
